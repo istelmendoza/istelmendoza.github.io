@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>404 Not Found</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    body, html {
+      margin: 0;
+      height: 100%;
+      overflow: hidden; /* Disable scrollbar */
+    }
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://github.com/iiistell/404/blob/main/JiaMoradoo.png?raw=true');
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+    .content {
+      position: relative;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; 
+      color: #fff; 
+      padding-left: 100px; 
+      padding-top: 80px; 
+    }
+    .flex-container {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+    }
+    h1 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 215px;
+      margin: 0;
+    }
+    h3 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 215px;
+      margin: 0;
+    }
+    p {
+      font-size: 20px; 
+      font-family: 'Courier New', Courier, monospace;
+      margin-top: 5px;  
+    }
+    .ball {
+      height: 215px;
+      width: 215px;
+      transition: transform 0.3s ease-in-out;
+      margin-left: 0;
+      animation: bounce 0.4s infinite alternate; 
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-30px); } 
+    }
+    .button-container {
+      margin-top: 20px; 
+    }
+    .back-button {
+      background-color: #3374b9;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s, transform 0.3s; 
+    }
+    .back-button:hover {
+      background-color: #0e3864; 
+      transform: scale(1.05); 
+    }
+  </style>
+</head>
+<body>
+  <div class="background-image"></div>
+  <div class="content">
+    <div class="contents">
+      <div class="flex-container">
+        <h1>4</h1>
+        <img class="ball" src="https://mikasasports.co.jp/e/wp-content/uploads/2018/11/V330W-900x900.png">
+        <h3>4</h3>
+      </div>
+      <p><b>PAGE NOT FOUND</b>
+        <br><br>
+        The requested URL page was not found on this server
+      </p>
+      <div class="button-container">
+        <button class="back-button" >Go to Homepage</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
