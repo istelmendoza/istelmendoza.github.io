@@ -32,6 +32,17 @@
       color: white;
     }
 
+    .card {
+      transition: transform 0.5s ease, background-color 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    .card:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.05);
+      box-shadow: 0px 4px 10px white ; 
+    }
+
     .section-title {
       color: white;
       margin-top: 2rem;
@@ -83,7 +94,7 @@
     <h2 class="section-title">Upcoming Disney Movies</h2>
     <div class="row justify-content-center g-4 mt-3">
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-dark text-light" style="width: 30rem;">
+        <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top" width="560" height="315"
             src="https://www.youtube.com/embed/TbiPcMCz0Ek?si=u4TWDVZKCq4Dacaw" title="YouTube video player"
             frameborder="0"
@@ -96,7 +107,7 @@
         </div>
       </div>
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-dark text-light" style="width: 30rem;">
+        <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top" width="560" height="315"
             src="https://www.youtube.com/embed/gvlMel9ZBdg?si=k4rFyYEQszxZT7I7" title="YouTube video player"
             frameborder="0"
@@ -109,7 +120,7 @@
         </div>
       </div>
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-dark text-light" style="width: 30rem;">
+        <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top" width="560" height="315"
             src="https://www.youtube.com/embed/hDZ7y8RP5HE?si=RlmYCoO99zGbRDDq" title="YouTube video player"
             frameborder="0"
