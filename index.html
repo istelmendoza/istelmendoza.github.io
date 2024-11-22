@@ -11,8 +11,7 @@
 
 </head>
 
-<body data-bs-theme="light" id="body">
-
+<body data-bs-theme="dark" >
   <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 mb-3 bg-body-tertiary"
     style="position: fixed; top: 0; width: 100%; z-index: 1000;">
     <a class="navbar-brand fw-bold" href="#">KRISTEL JOY MENDOZA</a>
@@ -31,8 +30,6 @@
         <li class="nav-item">
           <a class="nav-link fw-bold" href="#explorenow">Projects</a>
         </li>
-        <button class="btn btn-outline-secondary text-black fw-bold" id="btnColor" onclick="changeColorMode()">Dark
-          Mode</button>
       </ul>
     </div>
   </nav>
@@ -97,7 +94,7 @@
 
   <!--About Me-->
 
-  <div class="container text-center p-5" id="AboutMe">
+  <div class="container text-center p-5" id="AboutMe" style="min-height: 100vh; display: flex; justify-content: center; align-items: center;">
     <div class="row justify-content-center align-items-center">
       <div class="col-12 col-md-6 mb-4 mb-md-0">
         <div class="card rounded-3 mx-auto" style="width: 18rem;">
@@ -122,6 +119,7 @@
       </div>
     </div>
   </div>
+  
 
 
 
@@ -384,23 +382,6 @@
   </footer>
   </div>
   </div>
-
-
-  <script>
-    var colorMode = "light";
-
-    function changeColorMode() {
-      if (colorMode == "light") {
-        document.getElementById("body").setAttribute("data-bs-theme", "dark");
-        document.getElementById("btnColor").innerHTML = "Light Mode";
-        colorMode = "dark";
-      } else {
-        document.getElementById("body").setAttribute("data-bs-theme", "light");
-        document.getElementById("btnColor").innerHTML = "Dark Mode";
-        colorMode = "light";
-      }
-    }
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
