@@ -4,12 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Disney Upcoming Movies</title>
+  <title>Disney Movies</title>
+  <link rel="icon" type="image/x-icon" href="https://github.com/iiistell/API/blob/main/disneylogo.png?raw=true" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
     body {
-      background-color: black;
       scroll-behavior: smooth;
       transition: scroll 0.5s ease-out;
     }
@@ -39,8 +39,8 @@
     .card:hover {
       background-color: white;
       color: black;
-      transform: scale(1.05);
-      box-shadow: 0px 4px 10px #6c757d;
+      transform: scale(1.0);
+      box-shadow: 0px 5px 10px #6c757d;
     }
 
     .section-title {
@@ -64,14 +64,23 @@
       display: block;
       color: beige;
     }
+
+    .btn-primary {
+    background-color: #6c757d; 
+    border: none; 
+  }
+
+  .btn-primary:hover {
+    background-color: #ffffff9f; 
+    color: #000000; 
+  }
   </style>
 </head>
 
 <body data-bs-theme="dark">
-  <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 mb-3 bg-secondary"
+  <nav id="navbar-example2" class="navbar navbar-expand-lg px-3 mb-3 bg-body-tertiary"
     style="position: fixed; top: 0; width: 100%; z-index: 1000;">
     <img src="https://github.com/iiistell/API/blob/main/disneylogo.png?raw=true" style="width:30px; height:30px;">
-    <h5 class="p-2 my-auto">Disney</h5>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -79,13 +88,10 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="#home">Home</a>
+          <a class="nav-link fw-bold" href="../index.html">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold" href="#upcoming-movies">Upcoming Movies</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link fw-bold" href="#explore-now">Explore Now</a>
         </li>
       </ul>
     </div>
@@ -101,8 +107,10 @@
 
   <!-- Upcoming Movies -->
   <section id="upcoming-movies" class="container ">
-    <h2 class="section-title">Upcoming Disney Movies</h2>
+    <h2 class="section-title">New and Upcoming Disney Movies</h2>
+    <p class="fst-italic text-center">Keep a look out for this movies coming to a cinemas near you</p>
     <div class="row justify-content-center g-4 mt-2 mb-3">
+      <!--Snow White-->
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top rounded-4" width="560" height="315"
@@ -114,63 +122,52 @@
           <div class="card-body">
             <p class="card-text">Experience the reimagining of the classic Snow White tale coming soon to theaters.</p>
           </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
-        <div class="card bg-dark text-light rounded-4" style="width: 30rem; position: relative;">
-          <iframe class="card-img-top rounded-4" width="560" height="315"
-            src="https://www.youtube.com/embed/gvlMel9ZBdg?si=k4rFyYEQszxZT7I7" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <h5 class="card-title text-center p-3">Frozen III</h5>
-          <div class="card-body">
-            <p class="card-text">Join Elsa and Anna in an epic new adventure in Arendelle.</p>
-          </div>
-
-          <!-- Button trigger modal -->
           <div class="text-center mt-3 mb-3">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-              Movie Details 
+            <button type="button" 
+                    class="btn btn-secondary text-white px-4 py-2" 
+                    data-bs-toggle="modal" 
+                    data-bs-target="#modalButtonSnowWhite"
+                    style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
             </button>
           </div>
         </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalButtonSnowWhite" tabindex="-1" aria-labelledby="modalLabelSnowWhite"
+          aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="modalLabelSnowWhite">Snow White (2025)</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
                 <div class="container">
-                  <!-- Tags -->
                   <div class="mb-3">
-                    <span class="badge rounded-pill bg-secondary me-2">Computer Animation</span>
                     <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
-                    <span class="badge rounded-pill bg-secondary me-2">Animation</span>
-                    <span class="badge rounded-pill bg-secondary me-2">Comedy</span>
-                    <span class="badge rounded-pill bg-secondary me-2">Drama</span>
                     <span class="badge rounded-pill bg-secondary me-2">Family</span>
                     <span class="badge rounded-pill bg-secondary me-2">Fantasy</span>
-                    <span class="badge rounded-pill bg-secondary">Musical</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Musical</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Romance</span>
                   </div>
-
-                  <!-- Description -->
-                  <p>Elsa and Anna take Olaf, Kristoff, and Sven for another adventure.</p>
-
-                  <!-- Credits -->
+                  <p>Live-action adaptation of the 1937 Disney animated film 'Snow White and the Seven Dwarfs'.</p>
                   <hr>
                   <ul class="list-unstyled">
-                    <li><strong>Directors:</strong> <a href="#" class="text-primary text-decoration-none">Jennifer
-                        Lee</a> &middot; <a href="#" class="text-primary text-decoration-none">Marc Smith</a></li>
-                    <li><strong>Writers:</strong> <a href="#" class="text-primary text-decoration-none">Jennifer Lee</a>
-                      &middot; <a href="#" class="text-primary text-decoration-none">Marc Smith</a></li>
-                    <li><strong>Stars:</strong> <a href="#" class="text-primary text-decoration-none">Kristen Bell</a>
-                      &middot; <a href="#" class="text-primary text-decoration-none">Idina Menzel</a> &middot; <a
-                        href="#" class="text-primary text-decoration-none">Jonathan Groff</a></li>
+                    <li><strong>Directors:</strong>
+                      <a href="https://www.imdb.com/name/nm1989536/?ref_=tt_ov_dr_1"
+                        class="text-primary text-decoration-none">Marc Webb</a>
+                    </li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm1950086/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Greta Gerwig</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0933379/?ref_=tt_ov_wr_2"
+                        class="text-primary text-decoration-none">Erin Cressida Wilson</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0087490/?ref_=tt_ov_wr_3"
+                        class="text-primary text-decoration-none">Dorothy Ann Blank</a></li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm10399505/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Rachel Zegler</a>
+                      &middot; <a href="https://www.imdb.com/name/nm2933757/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none">Gal Gadot</a> &middot; <a
+                        href="https://www.imdb.com/name/nm8084427/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Andrew Burnap</a></li>
                   </ul>
                 </div>
               </div>
@@ -181,6 +178,77 @@
           </div>
         </div>
       </div>
+      <!--Frozen II-->
+      <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
+        <div class="card bg-dark text-light rounded-4" style="width: 30rem; position: relative;">
+          <iframe class="card-img-top rounded-4" width="560" height="315"
+            src="https://www.youtube.com/embed/gvlMel9ZBdg?si=k4rFyYEQszxZT7I7" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <h5 class="card-title text-center p-3">Frozen III (2027)</h5>
+          <div class="card-body">
+            <p class="card-text">Join Elsa and Anna in an epic new adventure in Arendelle.</p>
+          </div>
+          <div class="text-center mt-3 mb-3">
+            <button type="button" class="btn btn-secondary text-white px-4 py-2" data-bs-toggle="modal" data-bs-target="#modalButtonFrozen" 
+            style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
+            </button>
+          </div>
+        </div>
+        <div class="modal fade" id="modalButtonFrozen" tabindex="-1" aria-labelledby="modalLabelFrozen"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabelFrozen">Frozen III</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="mb-3">
+                    <span class="badge rounded-pill bg-secondary me-2">Computer Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Comedy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Drama</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Family</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Fantasy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Musical</span>
+                  </div>
+                  <p>Elsa and Anna take Olaf, Kristoff, and Sven for another adventure.</p>
+                  <hr>
+                  <ul class="list-unstyled">
+                    <li><strong>Directors:</strong><a href="https://www.imdb.com/name/nm0118333/?ref_=tt_ov_dr_1"
+                        class="text-primary text-decoration-none">Chris Buck
+                      </a> &middot;<a href="https://www.imdb.com/name/nm1601644/?ref_=tt_ov_dr_2"
+                        class="text-primary text-decoration-none">Jennifer
+                        Lee</a></li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm1601644/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Jennifer Lee</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0026153/?ref_=tt_ov_wr_2"
+                        class="text-primary text-decoration-none">Hans Christian Andersen</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0118333/?ref_=tt_ov_wr_3"
+                        class="text-primary text-decoration-none">Chris Buck</a></li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm0068338/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Kristen Bell</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0579953/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none">Idina Menzel</a> &middot; <a
+                        href="https://www.imdb.com/name/nm1265802/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Josh Gad</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Moana II-->
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top rounded-4" width="560" height="315"
@@ -193,8 +261,68 @@
             <p class="card-text">Embark on a thrilling adventure as Moana returns to the ocean to discover new lands and
               answer the call of her ancestors.</p>
           </div>
+          <div class="text-center mt-3 mb-3">
+            <button type="button" class="btn btn-secondary text-white px-4 py-2" data-bs-toggle="modal" data-bs-target="#modalButtonMoanaII"
+            style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
+            </button>
+          </div>
+        </div>
+        <div class="modal fade" id="modalButtonMoanaII" tabindex="-1" aria-labelledby="modalLabelMoanaII"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabelMoanaII">Moana II (2024)</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="mb-3">
+                    <span class="badge rounded-pill bg-secondary me-2">Computer Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Sea Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Comedy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Family</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Fantasy</span>
+                    <span class="badge rounded-pill bg-secondary">Musical</span>
+                  </div>
+                  <p>After receiving an unexpected call from her wayfinding ancestors, Moana must journey to the far
+                    seas of Oceania and into dangerous, long-lost waters for an adventure unlike anything she's ever
+                    faced.</p>
+                  <hr>
+                  <ul class="list-unstyled">
+                    <li><strong>Directors:</strong> <a href="https://www.imdb.com/name/nm3989471/?ref_=tt_ov_dr_1"
+                        class="text-primary text-decoration-none">David G.
+                        Derrick Jr.
+                      </a> &middot; <a href="https://www.imdb.com/name/nm2911364/?ref_=tt_ov_dr_2"
+                        class="text-primary text-decoration-none">Jason Hand</a> &middot;
+                      <a href="https://www.imdb.com/name/nm2834849/?ref_=tt_ov_dr_3"
+                        class="text-primary text-decoration-none">Dana Ledoux Miller</a></li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm1158544/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Jared Bush</a>
+                      &middot; <a href="https://www.imdb.com/name/nm2834849/?ref_=tt_ov_wr_2"
+                        class="text-primary text-decoration-none">Dana Ledoux Miller</a>&middot; <a
+                        href="https://www.imdb.com/name/nm2414279/?ref_=tt_ov_wr_3"
+                        class="text-primary text-decoration-none">Bek Smith</a></li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm0425005/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Dwayne Johnson</a>
+                      &middot; <a href="https://www.imdb.com/name/nm7635388/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none">Auli'i Cravalho</a> &middot; <a
+                        href="https://www.imdb.com/name/nm0876138/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Allan Tudyk</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!--Mufasa: The Lion King-->
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top rounded-4" width="560" height="315"
@@ -208,8 +336,66 @@
               legendary King of the Pride Lands. Experience his trials, triumphs, and the legacy that shaped the Circle
               of Life.</p>
           </div>
+          <div class="text-center mt-3 mb-3">
+            <button type="button" class="btn btn-secondary text-white px-4 py-2"  data-bs-toggle="modal" data-bs-target="#modalButtonMufasa"
+            style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
+            </button>
+          </div>
+        </div>
+        <div class="modal fade" id="modalButtonMufasa" tabindex="-1" aria-labelledby="modalLabelMufasa"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabelMufasa">MUFASA: The Lion King (2024)</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="mb-3">
+                    <span class="badge rounded-pill bg-secondary me-2">Animal Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Computer Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Drama</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Family</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Fantasy</span>
+                    <span class="badge rounded-pill bg-secondary">Musical</span>
+                  </div>
+                  <p>Mufasa, a cub lost and alone, meets a sympathetic lion named Taka, the heir to a royal bloodline.
+                    The chance meeting sets in motion an expansive journey of a group of misfits searching for their
+                    destiny.</p>
+                  <hr>
+                  <ul class="list-unstyled">
+                    <li><strong>Directors:</strong> <a
+                        href="https://www.imdb.com/title/tt13186482/mediaviewer/rm881550593/?ref_=tt_ov_i"
+                        class="text-primary text-decoration-none">Barry Jenkins
+                      </a></li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm0941314/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Linda
+                        Woolverton</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0575293/?ref_=tt_ov_wr_2"
+                        class="text-primary text-decoration-none">Irene Mecchi</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0731271/?ref_=tt_ov_wr_3"
+                        class="text-primary text-decoration-none">Jonathan Roberts</a></li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm7543974/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Aaron Pierre</a>
+                      &middot; <a href="https://www.imdb.com/name/nm5123156/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none"> Kelvin Harrison Jr.</a> &middot;
+                      <a href="https://www.imdb.com/name/nm0736622/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Seth Rogen</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!--Elio-->
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top rounded-4" width="560" height="315"
@@ -223,8 +409,67 @@
               Elio, an ordinary kid, is mistaken for Earth’s ambassador to the universe, leading to a fun and
               heartwarming adventure of self-discovery in a stunning cosmic world.</p>
           </div>
+          <div class="text-center mt-3 mb-3">
+            <button type="button" class="btn btn-secondary text-white px-4 py-2"  data-bs-toggle="modal" data-bs-target="#modalButtonElio"
+            style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
+            </button>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalButtonElio" tabindex="-1" aria-labelledby="modalLabelElio" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabelElio">Elio (2025)</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="mb-3">
+                    <span class="badge rounded-pill bg-secondary me-2">Alien Invasion</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Computer Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Space Sci-Fi</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Animation</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Comedy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Drama</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Family</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Fantasy</span>
+                    <span class="badge rounded-pill bg-secondary">Sci-Fi</span>
+                  </div>
+                  <p>Elio, a space fanatic with an active imagination, finds himself on a cosmic misadventure where he
+                    must form new bonds with alien lifeforms, navigate a crisis of intergalactic proportions and somehow
+                    discover who he is truly meant to be.</p>
+                  <hr>
+                  <ul class="list-unstyled">
+                    <li><strong>Directors:</strong> <a href="https://www.imdb.com/name/nm2937122/?ref_=tt_ov_dr_1"
+                        class="text-primary text-decoration-none">Adrian Molina
+                      </a> &middot; <a href="https://www.imdb.com/name/nm6461347/?ref_=tt_ov_dr_2"
+                        class="text-primary text-decoration-none">Madeline Sharafian</a>
+                      &middot; <a href="https://www.imdb.com/name/nm7626019/?ref_=tt_ov_dr_3"
+                        class="text-primary text-decoration-none">Domee Shi</a></li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm2937122/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Adrian
+                        Molina</a>
+                    </li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm10354026/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Yonas Kibreab</a>
+                      &middot; <a href="https://www.imdb.com/name/nm0757855/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none">Zoe Saldana</a> &middot; <a
+                        href="https://www.imdb.com/name/nm0004951/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Brad Garrett</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <!--How to Train Your Dragon-->
       <div class="col-xl-4 col-md-6 col-sm-12 d-flex justify-content-center">
         <div class="card bg-dark text-light rounded-4" style="width: 30rem;">
           <iframe class="card-img-top rounded-4" width="560" height="315"
@@ -237,18 +482,61 @@
             <p class="card-text">Hiccup and Toothless return in a live-action adventure, bringing their epic story of
               friendship and courage to life like never before!</p>
           </div>
+          <div class="text-center mt-3 mb-3">
+            <button type="button" class="btn btn-secondary text-white px-4 py-2"  data-bs-toggle="modal" data-bs-target="#modalButton"
+            style="transition: background-color 0.3s ease; font-size: 1.1rem;">
+              Movie Details
+            </button>
+          </div>
+        </div>
+        <div class="modal fade" id="modalButton" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalLabel">How to Train Your Dragon (2025) </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="container">
+                  <div class="mb-3">
+                    <span class="badge rounded-pill bg-secondary me-2">Sword & Sorcery</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Teen Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Teen Fantasy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Action</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Adventure</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Comedy</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Drama</span>
+                    <span class="badge rounded-pill bg-secondary me-2">Family</span>
+                    <span class="badge rounded-pill bg-secondary">Fantasy</span>
+                  </div>
+                  <p>Follows a young Viking as he aspires to hunt dragons, and how he unexpectedly becomes a friend of a
+                    young dragon.</p>
+                  <hr>
+                  <ul class="list-unstyled">
+                    <li><strong>Directors:</strong> <a href="https://www.imdb.com/name/nm0213450/?ref_=tt_ov_dr_1"
+                        class="text-primary text-decoration-none">Dean DeBlois
+                        Lee</a></li>
+                    <li><strong>Writers:</strong> <a href="https://www.imdb.com/name/nm0213450/?ref_=tt_ov_wr_1"
+                        class="text-primary text-decoration-none">Dean DeBlois</a>
+                    </li>
+                    <li><strong>Stars:</strong> <a href="https://www.imdb.com/name/nm9296746/?ref_=tt_ov_st_1"
+                        class="text-primary text-decoration-none">Mason Thames</a>
+                      &middot; <a href="https://www.imdb.com/name/nm9135274/?ref_=tt_ov_st_2"
+                        class="text-primary text-decoration-none">Nico Parker</a> &middot; <a
+                        href="https://www.imdb.com/name/nm0124930/?ref_=tt_ov_st_3"
+                        class="text-primary text-decoration-none">Gerard Butler</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
-
-  <div class="container">
-    <div class="row">
-      <div class="col">
-
-      </div>
-    </div>
-  </div>
 
   <footer class="bg-secondary">
     <p class="mb-0">© 2024 Disney. All Rights Reserved.</p>
